@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/lanta/static/media/6valkas_edited.2427b1ff.jpg"
   },
   {
-    "revision": "b3efa963db3beef01082",
+    "revision": "07a78d902de4a5b6cd71",
     "url": "/lanta/static/css/main.dc2448e1.chunk.css"
   },
   {
@@ -76,8 +76,8 @@ self.__precacheManifest = [
     "url": "/lanta/static/media/5valkas_edited.55075269.jpg"
   },
   {
-    "revision": "b3efa963db3beef01082",
-    "url": "/lanta/static/js/main.b3efa963.chunk.js"
+    "revision": "07a78d902de4a5b6cd71",
+    "url": "/lanta/static/js/main.07a78d90.chunk.js"
   },
   {
     "revision": "8c8b0b5e98f7f31e61ecb43c1bcff9c7",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
     "url": "/lanta/static/media/revlon4.76f55b85.jpg"
   },
   {
-    "revision": "38295095f0944eae1b03da9e3ece82e0",
+    "revision": "aadef64c3cb3df6a711616283009fb2f",
     "url": "/lanta/index.html"
   }
 ];
