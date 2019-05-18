@@ -69,7 +69,7 @@ class Contacts extends Component {
                                         <Card >
                                             <Card.Body>
                                                 <Card.Title style={{ fontWeight: '600', marginTop: '20px', marginBottom: '0px' }}>{item[key].name}</Card.Title>
-                                                <Card.Text style={{ fontWeight: '600', marginTop: '20px', marginBottom: '0px' }}>Адресс:</Card.Text>
+                                                <Card.Text style={{ fontWeight: '600', marginTop: '20px', marginBottom: '0px' }}>Адрес:</Card.Text>
                                                 <ListGroupItem><a target='_blank' href={item[key].adressLink}><i className="fas fa-map-marker-alt"></i>{"  "}{item[key].adress}</a></ListGroupItem>
                                                 <Card.Text style={{ fontWeight: '600', marginTop: '20px', marginBottom: '0px' }}>Телефон:</Card.Text>
                                                 {item[key].tel.map(time =>
