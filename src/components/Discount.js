@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardDeck, Container, Col, Row } from "react-bootstrap";
 import Sales from "../img/sales.jpg";
+import Discount from "../img/discount.jpg";
 
 
 
@@ -11,11 +12,9 @@ class About extends Component {
             <div className="ghost_page">
                 <Container>
                     <CardDeck >
-                        <Row>
-                            <Col sm >
-                                <Card className="bg-dark text-white lg" >
+                                <Card className="bg-dark text-white lg">
                                     <Card.Img variant="top" src={Sales} />
-                                    <Card.Body>
+                                    <Card.Body style={{minHeight:"225px"}}>
                                         <Card.Title >СЧАСТЛИВЫЙ ДЕНЬ</Card.Title>
                                         <Card.Text >
                                             Воскресенье<br/>
@@ -26,11 +25,9 @@ class About extends Component {
                                     </Card.Body>
                                 </Card>
 
-                            </Col>
-                            <Col sm >
                                 <Card className="bg-dark text-white">
                                     <Card.Img variant="top" src={Sales} />
-                                    <Card.Body>
+                                    <Card.Body  style={{minHeight:"225px"}}>
                                         <Card.Title >СЧАСТЛИВЫЕ ЧАСЫ<br/> (С 8.00 ДО 10.00)</Card.Title>
                                         <Card.Text>
                                             -20% на солярий
@@ -38,11 +35,9 @@ class About extends Component {
                                     </Card.Body>
                                 </Card>
 
-                            </Col>
-                            <Col sm >
                                 <Card className="bg-dark text-white">
-                                    <Card.Img variant="top" src={Sales} />
-                                    <Card.Body>
+                                    <Card.Img variant="top" src={Sales}  />
+                                    <Card.Body style={{minHeight:"225px"}}>
                                         <Card.Title >АБОНЕМЕНТ</Card.Title>
                                         <Card.Text>
                                             -20% на солярий
@@ -52,9 +47,9 @@ class About extends Component {
                                 </Card>
 
 
-
-                            </Col>
-                        </Row>
+                                <Card className="bg-dark text-white">
+                                    <Card.Img variant="top" src={Discount} />
+                                </Card>
 
 
 

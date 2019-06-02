@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Image } from "react-bootstrap";
+import Discount from "../img/discount.jpg";
 
 
 
@@ -23,6 +25,9 @@ class Preview extends Component {
                             Салоны красоты в даугавпилсе
 
                         </div>
+                    </div>
+                    <div className="spot_img">
+                    <Image src={Discount} style={{height:"450px"}} fluid/>
                     </div>
                     <div className="down_icon">
                     <Link
