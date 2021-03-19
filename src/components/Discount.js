@@ -2,10 +2,16 @@ import React, { Component } from "react";
 import { Card, CardDeck, Container, Col, Row } from "react-bootstrap";
 import Sales from "../img/sales.jpg";
 import Discount from "../img/discount.jpg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 
 class About extends Component {
+
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     render() {
         var src = "../img/sales.jpg"
         return (
@@ -47,8 +53,8 @@ class About extends Component {
                                 </Card>
 
 
-                                <Card className="bg-dark text-white">
-                                    <Card.Img variant="top" src={Discount} />
+                                <Card className="bg-dark text-white" onClick={this.scrollToTop} style={{cursor:"pointer"}}>
+                                    <Card.Img  src={Discount} />
                                 </Card>
 
 

@@ -27,7 +27,7 @@ class Preview extends Component {
                         </div>
                     </div>
                     <div className="spot_img">
-                    <Image src={Discount} style={{height:"450px"}} fluid/>
+                    <Image src={Discount} fluid/>
                     </div>
                     <div className="down_icon">
                     <Link

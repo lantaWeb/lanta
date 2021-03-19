@@ -94,6 +94,17 @@ body{
   width: 20px;
   margin: 90vh auto 0 auto;
 }
+
+.spot .spot_img img{
+  height: 350px;
+  transition: 0.7s;
+}
+
+.spot .spot_img img:hover{
+  height: 500px;
+  transition: 2s;
+
+}
 .spot .down_icon i{
   font-size: 30px;
   cursor: pointer;
@@ -184,3 +195,4 @@ padding: 20px;
   padding: 100px 190px;
 background: rgba(177, 16, 16, 0.87);
 }
+
