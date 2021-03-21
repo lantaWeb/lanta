@@ -26,6 +26,7 @@ class NavBar extends Component {
                         <Nav defaultActiveKey="/home"  >
                             <Link
                                 activeClass="active"
+                                className="link_to_section1"
                                 to="section1"
                                 spy={true}
                                 smooth={true}

@@ -80,16 +80,17 @@ body{
   left: 10%;
 
 }
+
+.spot {
+  width: 100%;
+}
+
 .spot .spot_img{
   position: absolute;
   top: 15%;
   right: 10%;
-
 }
-.spot {
-  width: 100%;
 
-}
 .spot .down_icon{
   width: 20px;
   margin: 90vh auto 0 auto;
@@ -111,7 +112,7 @@ body{
   color: #444444;
 }
 
-@media all and (max-width : 920px) {
+@media all and (max-width : 950px) {
   .spot .spot_text{
   margin: 100px auto;
     position: static;
@@ -127,6 +128,15 @@ body{
   .spot .down_icon{
     width: 20px;
     margin: 40px auto 0 auto;
+  }
+
+  .spot .spot_img{
+    display: none;
+  }
+}
+@media all and (max-width : 500px) {
+  #section1, .link_to_section1, .down_icon {
+    display: none;
   }
 }
 
