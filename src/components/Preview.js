@@ -18,7 +18,7 @@ class Preview extends Component {
                 <div className="spot">
                     <div className="spot_text">
                         <div className="darkspottext">
-                            Будь красивой
+                            Будь красивой TEST
 
                         </div>
                         <div className="darksmallspottext">
