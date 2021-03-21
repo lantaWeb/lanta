@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardDeck, Container, Col, Row } from "react-bootstrap";
 import Sales from "../img/sales.jpg";
-import Discount from "../img/discount.jpg";
+import Discount from "../img/discount.png";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Image } from "react-bootstrap";
-import Discount from "../img/discount.jpg";
+import Discount from "../img/discount.png";
 
 
 
@@ -18,7 +18,7 @@ class Preview extends Component {
                 <div className="spot">
                     <div className="spot_text">
                         <div className="darkspottext">
-                            Будь красивой TEST
+                            Будь красивой
 
                         </div>
                         <div className="darksmallspottext">
