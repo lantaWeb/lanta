@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "825449e99ce883452a8f",
+    "revision": "81edd0f2ddc861555053",
     "url": "/static/css/main.d5ca57ef.chunk.css"
   },
   {
-    "revision": "825449e99ce883452a8f",
-    "url": "/static/js/main.825449e9.chunk.js"
+    "revision": "81edd0f2ddc861555053",
+    "url": "/static/js/main.81edd0f2.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "36940ff389c21f9f39e6",
-    "url": "/static/js/2.36940ff3.chunk.js"
+    "revision": "281a03766082581d0335",
+    "url": "/static/js/2.281a0376.chunk.js"
   },
   {
-    "revision": "dd96b91256e3486793f70b75cbc60f6d",
-    "url": "/static/media/discount.dd96b912.jpg"
+    "revision": "e4d371034e6698ceec645f9defa8ea7b",
+    "url": "/static/media/discount.e4d37103.png"
   },
   {
     "revision": "1b1de90bdbca8e202259309288222080",
@@ -156,7 +156,7 @@ self.__precacheManifest = [
     "url": "/static/media/revlon4.76f55b85.jpg"
   },
   {
-    "revision": "32f8ddc4f0f1a3425102c56084e42f6e",
+    "revision": "07dff69d14aa8b2b1b527d396afe209a",
     "url": "/index.html"
   }
 ];
