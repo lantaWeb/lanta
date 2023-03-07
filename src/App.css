@@ -1,57 +1,72 @@
-body{
-  background-image:url(img/background2.png);
+body {
+  background-image: url(img/background2.png);
   background-position: top center;
   min-height: 668px;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Arimo', sans-serif;
 }
-.menu-bg{
 
+.menu-bg {
   background: #f2f2f2;
-}
-.toggle-bg{
 
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.toggle-bg {
   background: #c7c9e4ce;
 }
+
 .menu {
-  width:100%;
-  text-align:center;
-  }
+  width: 100%;
+  text-align: center;
+}
 
-
-
-.menu div a{
+.menu div a,
+.menu span {
   text-decoration: none;
-  padding: 12px 5px;
-  margin: 5px 20px;
-  font-size: 18px;
+  padding: 5px 0 5px 0;
+  margin: 0 15px;
+  font-size: 14px;
   font-weight: 900;
   color: rgb(68, 68, 68) !important;
   cursor: pointer;
   text-shadow: none !important;
-
-
 }
-.menu div a:hover{
+
+.menu span {
+  margin: 5px 70px 5px auto;
+}
+
+@media all and (max-width: 990px) {
+  .menu span {
+    margin: 5px 0;
+  }
+}
+
+.menu div a:hover,
+.menu span:hover {
   /* font-size: 18.5px; */
   /* margin: 5px 19px; */
   color: rgb(99, 99, 99) !important;
 }
-.menu div a.active{
+
+.menu div a {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.menu div a.active {
   border-bottom: 1px solid #444444;
   color: rgb(99, 99, 99) !important;
-
-  /* font-size: 18.5px; */
-  /* margin: 5px 19px; */
 }
-.logo{
+
+.logo {
   width: 100%;
   text-align: center;
   margin-left: 20px;
 }
-.center{
 
+.center {
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -60,149 +75,264 @@ body{
   color: darkslategray;
 }
 
+.my_navbar_toggle {
+  color: #ffffff00 !important;
+  border-color: #ffffff00 !important;
+  outline: none;
+}
+
+.my_navbar_toggle:focus {
+  outline: none;
+}
+
+.navBarToggle {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  cursor: pointer;
+}
+
+.navBarToggle span {
+  background: rgb(143, 141, 141);
+  border-radius: 3px;
+  height: 4.5px;
+  margin: 3.5px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.navBarToggle span:nth-of-type(1) {
+  width: 50%;
+}
+
+.navBarToggle span:nth-of-type(2) {
+  width: 100%;
+}
+
+.navBarToggle span:nth-of-type(3) {
+  width: 75%;
+}
+
+.navBarToggle input[type='checkbox'] {
+  display: none;
+}
+
+.navBarToggle input[type='checkbox']:checked~span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(5px, 0px);
+}
+
+.navBarToggle input[type='checkbox']:checked~span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+.navBarToggle input[type='checkbox']:checked~span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(16px, -6px) rotatez(45deg);
+}
+
 .darkspottext {
   color: rgb(68, 68, 68);
   font-size: 43px;
   font-weight: 400;
-  line-height: 1.60em;
+  line-height: 1.6em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
 .darksmallspottext {
   font-size: 22px;
   color: rgba(68, 68, 68, 0.65);
   line-height: 1.2em;
   text-transform: uppercase;
 }
-.spot .spot_text{
+
+.spot .spot_text {
   position: absolute;
   top: 50%;
   left: 10%;
-
 }
 
 .spot {
   width: 100%;
 }
 
-.spot .spot_img{
+.spot .spot_img {
   position: absolute;
   top: 15%;
   right: 10%;
 }
 
-.spot .down_icon{
+.spot .down_icon {
   width: 20px;
   margin: 90vh auto 0 auto;
 }
 
-.spot .spot_img img{
+.spot .spot_img img {
   height: 350px;
   transition: 0.7s;
 }
 
-.spot .spot_img img:hover{
+.spot .spot_img img:hover {
   height: 500px;
   transition: 2s;
-
 }
-.spot .down_icon i{
+
+.spot .down_icon i {
   font-size: 30px;
   cursor: pointer;
   color: #444444;
 }
 
-@media all and (max-width : 950px) {
-  .spot .spot_text{
-  margin: 100px auto;
+@media all and (max-width: 950px) {
+  .spot .spot_text {
+    margin: 100px auto;
     position: static;
   }
+
   .spot {
     text-align: center;
-  
   }
-  .spot .spot_img{
+
+  .spot .spot_img {
     margin: auto;
     position: static;
   }
-  .spot .down_icon{
+
+  .spot .down_icon {
     width: 20px;
     margin: 40px auto 0 auto;
   }
 
-  .spot .spot_img{
-    display: none;
-  }
-}
-@media all and (max-width : 500px) {
-  #section1, .link_to_section1, .down_icon {
+  .spot .spot_img {
     display: none;
   }
 }
 
-.ghost_page{
+@media all and (max-width: 500px) {
+
+  #section1,
+  .link_to_section1,
+  .down_icon {
+    display: none;
+  }
+}
+
+.section-content {
+  padding-top: 100px;
+}
+
+#section3 {
+  background: white;
+}
+
+.ghost_page {
   width: 100%;
   padding: 20px 45px;
-  margin: 100px 0px;
-
 }
-.ghost_page .ghost_page_content{
+
+.ghost_page .ghost_page_content {
   width: 100%;
   font-size: 16px;
   padding: 50px;
-background: rgba(255, 255, 255, 0.87);
+  background: rgba(255, 255, 255, 0.87);
 }
-.ghost_page .ghost_page_content h2{
 
-
+.ghost_page .ghost_page_content h2 {
   font-size: 22px;
 }
-.white_page{
+
+.white_page {
   width: 100%;
   background: white;
 }
-.white_page .card
-{
+
+.white_page .card {
   min-width: 32%;
   margin: 15px;
-
 }
-.header{
+
+.header {
   width: 100%;
   padding: 20px 0;
 }
-.header .title{
+
+.header .title {
   margin: auto;
   width: 82%;
   border-bottom: solid 1px rgb(68, 68, 68);
 }
-.header .title h2{
+
+.header .title h2 {
   margin: auto;
   color: rgb(68, 68, 68);
 }
-.footer{
-width: 100%;
-height: 120px;
-background: #444444;
-padding: 20px;
 
-
+.footer {
+  width: 100%;
+  height: 120px;
+  background: #444444;
+  padding: 20px;
 }
-.footer_content{
+
+.footer_content {
   margin: auto;
   width: 200px;
   height: 50px;
-  color:white;
+  color: white;
 }
-.list-group-item a:hover{
-  text-decoration: none !important;
 
+.list-group-item a:hover {
+  text-decoration: none !important;
 }
-.ghost_page .ghost_page_discount{
+
+.ghost_page .ghost_page_discount {
   font-size: 16px;
   display: inline;
   margin: 0 10px;
   padding: 100px 190px;
-background: rgba(177, 16, 16, 0.87);
+  background: rgba(177, 16, 16, 0.87);
 }
 
+.discountText {
+  font-weight: 900;
+  font-size: 18px;
+  color: #dd263e;
+}
+
+.discountImg {
+  height: 100%;
+}
+
+.navbar_hidden {
+  display: none;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #797575;
+  border-radius: 20px;
+  border: 3px solid #f2f2f2;
+}
+
+@media only screen and (max-width: 425px) {
+  .mob-fit {
+    object-fit: cover;
+    height: 285px;
+  }
+  .ghost_page{
+    padding: 0;
+  }
+}

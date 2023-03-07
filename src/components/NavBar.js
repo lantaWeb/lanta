@@ -1,106 +1,95 @@
 import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Image } from "react-bootstrap"
-import Logo from "../img/logo/logo.png"
-
-import { Route, BrowserRouter } from "react-router-dom";
+import { Image } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Text } from "@eo-locale/react";
+import Logo from "../img/logo/logo.png";
 
-//import createBrouwserHistory from "history/createBrowserHistory";
+const sections = [
+  { sectionNumber: 1, sectionNameId: "aboutUs" },
+  { sectionNumber: 2, sectionNameId: "services" },
+  { sectionNumber: 3, sectionNameId: "cosmetics" },
+  { sectionNumber: 5, sectionNameId: "promotions" },
+  { sectionNumber: 6, sectionNameId: "contacts" },
+];
 
-
-//const history = createBrouwserHistory()
 class NavBar extends Component {
-    scrollToTop = () => {
-        scroll.scrollToTop();
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false,
     };
-    render() {
-        return (
+    this.openCloseNavBar = this.openCloseNavBar.bind(this);
+  }
 
+  scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
-            <div>
-                <Navbar expand="lg" className="menu-bg" fixed="top">
-                    <Navbar.Brand href="#" onClick={this.scrollToTop}><Image src={Logo} width="110" /></Navbar.Brand>
-                    <Navbar.Toggle className="toggle-bg" aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse className="menu" id="basic-navbar-nav" >
-                        <Nav defaultActiveKey="/home"  >
-                            <Link
-                                activeClass="active"
-                                className="link_to_section1"
-                                to="section1"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                О НАС
-                            </Link>
-                            <Link
-                                activeClass="active"
-                                to="section2"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                УСЛУГИ
-                            </Link>
-                            <Link
-                                activeClass="active"
-                                to="section3"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                КОСМЕТИКА
-                            </Link>
-                            {/* <Link
-                                activeClass="active"
-                                to="section4"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                ЦЕНЫ
-                            </Link> */}
-                            <Link
-                                activeClass="active"
-                                to="section5"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                АКЦИИ
-                            </Link>
-                            <Link
-                                activeClass="active"
-                                to="section6"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                КОНТАКТЫ
-                            </Link>
+  openCloseNavBar(expanded) {
+    this.setState({ ...this.state, expanded: expanded });
+  }
 
-                            {/* <Link to="section1">О НАС</Link>
-                            <Link to="section2">УСЛУГИ</Link>
-                            <Link to="section3">КОСМЕТИКА</Link>
-                            <Link to="section4">АКЦИИ</Link>
-                            <Link to="section5">КОНТАКТЫ</Link> */}
+  render() {
+    // const { changeLanguage, langToChange } = this.props;
+    const { expanded } = this.state;
+    return (
+      <div>
+        <Navbar expanded={expanded} expand="lg" className="menu-bg" fixed="top">
+          <Navbar.Brand
+            href="#"
+            onClick={() => {
+              this.openCloseNavBar(false);
+              this.scrollToTop();
+            }}
+          >
+            <Image src={Logo} width="90" />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            className="my_navbar_toggle"
+            //onClick={() => this.openCloseNavBar(!expanded)}
+            children={
+              <label className="navBarToggle" for="check">
+                <input
+                  checked={expanded}
+                  onClick={() => this.openCloseNavBar(!expanded)}
+                  type="checkbox"
+                  id="check"
+                />
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            }
+          />
 
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
-            </div>
-
-
-
-        );
-    }
+          <Navbar.Collapse className="menu" id="basic-navbar-nav">
+            <Nav defaultActiveKey="/home">
+              {sections.map((section, i) => (
+                <Link
+                  key={`${section.sectionNameId}_${i}`}
+                  activeClass="active"
+                  className={section.sectionNumber === 1 && "link_to_section1"}
+                  to={`section${section.sectionNumber}`}
+                  spy
+                  smooth
+                  offset={40}
+                  duration={1000}
+                  onClick={() => this.openCloseNavBar(false)}
+                  isDynamic
+                >
+                  <Text id={section.sectionNameId} />
+                </Link>
+              ))}
+            </Nav>
+            {/* <span onClick={() => changeLanguage(langToChange)}>
+              {langToChange}
+            </span> */}
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+    );
+  }
 }
 
 export default NavBar;

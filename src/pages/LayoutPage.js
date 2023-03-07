@@ -5,49 +5,66 @@ import About from "../components/About";
 import Services from "../components/Services";
 import Preview from "../components/Preview";
 import Cosmetics from "../components/Cosmetics";
-import Prices from "../components/Prices";
 import Discount from "../components/Discount";
 import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
-
-
-
+import { languages, locales } from "../_constants";
+import { TranslationsProvider } from "@eo-locale/react";
 
 class layoutPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { currentLang: languages.RU, langToChange: languages.LV };
+    this.changeLanguage = this.changeLanguage.bind(this);
+  }
+
+  componentDidMount() {
+    const currentLang = languages.RU;
+    // TO DO: 
+    //  localStorage.getItem("lang")
+    //   ? localStorage.getItem("lang").toUpperCase()
+    //   : languages.RU;
+
+    this.setState({
+      currentLang,
+      langToChange: this.getLangToChange(currentLang),
+    });
+  }
+
+  getLangToChange = (currentLang) =>
+    currentLang === languages.LV ? languages.RU : languages.LV;
+
+  changeLanguage(lang) {
+    localStorage.setItem("lang", lang);
+
+    this.setState({
+      currentLang: lang,
+      langToChange: this.getLangToChange(lang),
+    });
+  }
   render() {
+    const { currentLang, langToChange } = this.state;
     return (
-      <>
-        <Navbar />
-        <Preview />
-        <Section
-          component={<About />}
-          id="section1"
-        >
-        </Section>
-        <Section
-          component={<Services />}
-          id="section2"
+      <TranslationsProvider language={currentLang} locales={locales}>
+        <Navbar
+          langToChange={langToChange}
+          changeLanguage={this.changeLanguage}
         />
-        <Section
-          component={<Cosmetics />}
-          id="section3"
-        />
+        <Preview currentLang={currentLang} />
+        <Section component={<About />} id="section1"></Section>
+        <Section component={<Services />} id="section2" />
+        <Section component={<Cosmetics />} id="section3" />
         {/* <Section
           component={<Prices />}
           id="section4"
         /> */}
         <Section
-          component={<Discount />}
+          component={<Discount currentLang={currentLang} />}
           id="section5"
         />
-        <Section
-          component={<Contacts />}
-          id="section6"
-        />
-        <Footer>
-
-        </Footer>
-      </>
+        <Section component={<Contacts />} id="section6" />
+        <Footer></Footer>
+      </TranslationsProvider>
     );
   }
 }

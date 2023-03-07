@@ -1,64 +1,48 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import {Carousel} from "react-bootstrap";
-import SalonValkas from "../img/salon/1_edited.jpg"
-
-
-
-
+import { Carousel } from "react-bootstrap";
+import SalonValkas from "../img/salon/1_edited.jpg";
+import { Text } from "@eo-locale/react";
 
 class About extends Component {
-    render() {
-        function importAll(r) {
-            let images = {};
-            r.keys().map((item, index) => { images[index] = r(item); });
-            return images;
-          }
-          const images = importAll(require.context('../img/salon/about', false, /\.(png|jpe?g|svg)$/));
-        return (
-            <>
-                <div className="ghost_page">
-                    <div className="ghost_page_content">
-                    
-                    <h2>
-                    Красоту невозможно искусственно создать,
-                     красота – это удивительное внутреннее состояние гармонии, 
-                     легкости, одухотворенности и комфорта. Это окрыленное чувство 
-                     влюбленности — в себя и окружающий современные технологии в работе.
-                    </h2>
-                    <p>
-                    Милые дамы и уважаемые господа, приветливый коллектив салона 
-                    «Lanta» предлагает Вам вспомнить о себе, окунуться в атмосферу
-                     тепла и доброжелательности. Мы рады помочь, оказывая наши услуги,
-                      представительницам прекрасного пола и мужчинам всегда оставаться
-                       неотразимыми и желанными. Наш салон успешно работает в Даугавпилсе 
-                       с 1998 года, постоянно расширяя спектр своих услуг, применяя 
-                       современные технологии в работе.
-                    </p>
-                    <p>
-                    Мы рады каждому клиенту! Наши опытные мастера постоянно повышают 
-                    свою квалификацию, проходят различные курсы обучения, 
-                    благодаря чему оказывают своим клиентам услуги только высшего качества.
-                     Помогает им в этом также богатая фантазия и современное оборудование.
-                    </p>
-                    <p>
-                    Наша философия - давать клиенту не только сервис, но и дружеское отношение.
-
-                    </p>
-                    <p>
-                    Наша цель – сделать вас счастливыми.
-                        
-                    </p>
-                    <p>
-                    Наш вектор - следовать мировым трендам и тенденциям.
-
-                    </p>
-                    </div>
-                </div>
-
-            </>
-        );
+  render() {
+    function importAll(r) {
+      let images = {};
+      r.keys().forEach((item, index) => {
+        images[index] = r(item);
+      });
+      return images;
     }
+    const images = importAll(
+      require.context("../img/salon/about", false, /\.(png|jpe?g|svg)$/)
+    );
+    return (
+      <>
+        <div className="ghost_page">
+          <div className="ghost_page_content">
+            <h2>
+              <Text id="aboutPage.header" />
+            </h2>
+            <p>
+              <Text id="aboutPage.paragraph1" />
+            </p>
+            <p>
+              <Text id="aboutPage.paragraph2" />
+            </p>
+            <p>
+              <Text id="aboutPage.paragraph3" />
+            </p>
+            <p>
+              <Text id="aboutPage.paragraph4" />
+            </p>
+            <p>
+              <Text id="aboutPage.paragraph5" />
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
 }
 
 export default About;
