@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "5cf448479d85010f030a",
-    "url": "/static/css/main.b7846d48.chunk.css"
+    "revision": "3de9dcbcfd41e085941a",
+    "url": "/static/css/main.a22545bb.chunk.css"
   },
   {
-    "revision": "5cf448479d85010f030a",
-    "url": "/static/js/main.5cf44847.chunk.js"
+    "revision": "3de9dcbcfd41e085941a",
+    "url": "/static/js/main.3de9dcbc.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "281a03766082581d0335",
-    "url": "/static/js/2.281a0376.chunk.js"
+    "revision": "3c1345d208f6e81f6f63",
+    "url": "/static/js/2.3c1345d2.chunk.js"
   },
   {
     "revision": "e4d371034e6698ceec645f9defa8ea7b",
     "url": "/static/media/discount.e4d37103.png"
   },
   {
-    "revision": "1b1de90bdbca8e202259309288222080",
-    "url": "/static/media/sales.1b1de90b.jpg"
+    "revision": "10702c11d511e91338a1813a015140a5",
+    "url": "/static/media/discountTop.10702c11.png"
   },
   {
     "revision": "58d4198a6af960443d0629bba769c7a4",
@@ -156,7 +156,11 @@ self.__precacheManifest = [
     "url": "/static/media/revlon4.76f55b85.jpg"
   },
   {
-    "revision": "4b4ae57ea26deba84426e9aa28f5ce6d",
+    "revision": "1b1de90bdbca8e202259309288222080",
+    "url": "/static/media/sales.1b1de90b.jpg"
+  },
+  {
+    "revision": "7b2de10f9893045a2c1201df0103dd99",
     "url": "/index.html"
   }
 ];
