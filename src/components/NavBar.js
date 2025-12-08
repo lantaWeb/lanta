@@ -31,7 +31,7 @@ class NavBar extends Component {
   }
 
   render() {
-    // const { changeLanguage, langToChange } = this.props;
+    const { changeLanguage, langToChange } = this.props;
     const { expanded } = this.state;
     return (
       <div>
@@ -47,7 +47,7 @@ class NavBar extends Component {
           </Navbar.Brand>
           <Navbar.Toggle
             className="my_navbar_toggle"
-            //onClick={() => this.openCloseNavBar(!expanded)}
+            onClick={() => this.openCloseNavBar(!expanded)}
             children={
               <label className="navBarToggle" for="check">
                 <input
@@ -82,9 +82,9 @@ class NavBar extends Component {
                 </Link>
               ))}
             </Nav>
-            {/* <span onClick={() => changeLanguage(langToChange)}>
+            <span onClick={() => changeLanguage(langToChange)}>
               {langToChange}
-            </span> */}
+            </span>
           </Navbar.Collapse>
         </Navbar>
       </div>
