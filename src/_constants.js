@@ -1,6 +1,6 @@
 export const languages = {
   LV: "LV",
-  RU: "RU",
+  EN: "EN",
 };
 
 export const locales = [
@@ -13,12 +13,12 @@ export const locales = [
       promotions: "AKCIJAS",
       contacts: "KONTAKTI",
       aboutPage: {
-        header: `Skaistumu nevar mākslīgi radīt – skaistums ir brīnišķīga iekšēja harmonija, vieglums, iedvesma un labsajūta. Tā ir viegla, iedvesmojoša sajūta, kad esi iemīlējusies sevī un izmanto mūsdienu tehnoloģijas darbā.`,
+        header: `Skaistumu nevar mākslīgi radīt - skaistums ir brīnišķīga iekšēja harmonija, vieglums, iedvesma un labsajūta. Tā ir viegla, iedvesmojoša sajūta, kad esi iemīlējusies sevī un izmanto mūsdienu tehnoloģijas darbā.`,
         paragraph1: `Cienījamās dāmas un kungi! Draudzīgais „Lanta” salona kolektīvs aicina Jūs padomāt par sevi un ienirt siltas, sirsnīgas atmosfēras pasaulē. Mēs ar prieku palīdzam gan skaistās dāmas, gan vīriešiem vienmēr izskatīties nevainojami. Mūsu salons Daugavpilī darbojas jau kopš 1998. gada, nepārtraukti paplašinot pakalpojumu klāstu un izmantojot jaunākās tehnoloģijas.`,
         paragraph2: `Mēs priecājamies par katru klientu! Mūsu pieredzējušie meistari regulāri pilnveido kvalifikāciju, apmeklējot dažādus kursus, lai piedāvātu tikai augstākās kvalitātes pakalpojumus. To palīdz īstenot gan bagātā iztēle, gan modernā aprīkojuma klāsts.`,
-        paragraph3: `Mūsu filozofija – sniegt klientam ne tikai pakalpojumus, bet arī draudzīgu attieksmi.`,
-        paragraph4: `Mūsu mērķis – padarīt Jūs laimīgus.`,
-        paragraph5: `Mūsu ceļš – sekot pasaules tendencēm un modes aktualitātēm.`,
+        paragraph3: `Mūsu filozofija - sniegt klientam ne tikai pakalpojumus, bet arī draudzīgu attieksmi.`,
+        paragraph4: `Mūsu mērķis - padarīt Jūs laimīgus.`,
+        paragraph5: `Mūsu ceļš - sekot pasaules tendencēm un modes aktualitātēm.`,
       },
       preview: {
         spotText: "Esi skaista",
@@ -26,7 +26,7 @@ export const locales = [
       },
       servicesPage: {
         pageName: "Mūsu pakalpojumi",
-        hairdresserServices: "GUNDABĀM",
+        hairdresserServices: "PAKALPOJUMI FRIZIERU",
         womenHaircuts: "Sieviešu frizūras",
         manHaircuts: "Vīriešu frizūras",
         childsHaircuts: "Bērnu frizūras",
@@ -89,29 +89,16 @@ export const locales = [
       promotions: "АКЦИИ",
       contacts: "КОНТАКТЫ",
       aboutPage: {
-        header: `Красоту невозможно искусственно создать, красота – это
-                удивительное внутреннее состояние гармонии, легкости,
-                одухотворенности и комфорта. Это окрыленное чувство влюбленности —
-                в себя и окружающий современные технологии в работе.`,
-        paragraph1: `Милые дамы и уважаемые господа, приветливый коллектив салона
-                «Lanta» предлагает Вам вспомнить о себе, окунуться в атмосферу
-                тепла и доброжелательности. Мы рады помочь, оказывая наши услуги,
-                представительницам прекрасного пола и мужчинам всегда оставаться
-                неотразимыми и желанными. Наш салон успешно работает в Даугавпилсе
-                с 1998 года, постоянно расширяя спектр своих услуг, применяя
-                современные технологии в работе.`,
-        paragraph2: `Мы рады каждому клиенту! Наши опытные мастера постоянно повышают
-                свою квалификацию, проходят различные курсы обучения, благодаря
-                чему оказывают своим клиентам услуги только высшего качества.
-                Помогает им в этом также богатая фантазия и современное оборудование.`,
-        paragraph3: `Наша философия - давать клиенту не только сервис, но и дружеское
-                отношение.`,
-        paragraph4: `Наша цель – сделать вас счастливыми.`,
-        paragraph5: `Наш вектор - следовать мировым трендам и тенденциям.`,
+        header: `Красоту невозможно искусственно создать, красота – это удивительное внутреннее состояние гармонии, легкости, одухотворенности и комфорта. Это окрыленное чувство влюбленности - в себя и окружающий мир при помощи современных технологий.`,
+        paragraph1: `Милые дамы и уважаемые господа! Приветливый коллектив салона «Lanta» приглашает Вас вспомнить о себе и окунуться в атмосферу тепла и доброжелательности. Мы рады помочь и женщинам, и мужчинам всегда оставаться безупречными. Наш салон успешно работает в Даугавпилсе с 1998 года, постоянно расширяя спектр услуг и применяя современные технологии.`,
+        paragraph2: `Мы рады каждому клиенту! Наши опытные мастера регулярно повышают квалификацию, посещая различные курсы, чтобы предложить только услуги высочайшего качества. В этом помогает богатая фантазия и современное оборудование.`,
+        paragraph3: `Наша философия - дарить клиенту не только услуги, но и дружеское отношение.`,
+        paragraph4: `Наша цель - сделать вас счастливыми.`,
+        paragraph5: `Наш путь - следовать мировым трендам и тенденциям.`,
       },
       preview: {
         spotText: "Будь красивой",
-        spotTextMall: "Салоны красоты в даугавпилсе",
+        spotTextMall: "Салоны красоты в Даугавпилсе",
       },
       servicesPage: {
         pageName: "Наши услуги",
@@ -119,12 +106,12 @@ export const locales = [
         womenHaircuts: "Женские стрижки",
         manHaircuts: "Мужские стрижки",
         childsHaircuts: "Детские стрижки",
-        coloring: "Различные виды окрасок (мелирование, омбре)",
+        coloring: "Различные виды окрашивания (мелирование, омбре)",
         laying: "Укладка",
         manicurePedicure: "МАНИКЮР/ПЕДИКЮР",
         manicure: "Классический маникюр",
         pedicure: "Классический педикюр",
-        nailExtension: "Наращивание ногтей (гел/ акрил)",
+        nailExtension: "Наращивание ногтей (гель/акрил)",
         gelish: "Гелиш",
         correction: "Коррекция",
         therapeuticManicure: "Лечебный маникюр",
@@ -133,11 +120,11 @@ export const locales = [
         piercing: "Пирсинг",
         waxing: "Ваксинг",
         eyebrowCorrection: "Коррекция бровей",
-        eyelashes: "Покраска ресниц",
+        eyelashes: "Окрашивание ресниц",
         eyelashExtension: "Наращивание ресниц",
         eyelashPerm: "Завивка ресниц",
         makeup: "Макияж",
-        cleansesAndFaceMasks: "Чистки и маски для лица",
+        cleansesAndFaceMasks: "Чистка и маски для лица",
         solarium: "СОЛЯРИЙ",
         horizontal: "Горизонтальный солярий (Ergoline Turbo 450)",
         vertical: "Вертикальный солярий (Luxura)",
@@ -153,7 +140,7 @@ export const locales = [
         address: "Адрес",
         tell: "Телефон",
         workTime: "Время работы",
-        email: "Э-почта",
+        email: "Эл. почта",
       },
       cosmeticsPage: {
         pageName: "Наша косметика",
@@ -169,7 +156,84 @@ export const locales = [
       },
     },
   },
+  {
+    language: languages.EN,
+    messages: {
+      aboutUs: "ABOUT US",
+      services: "SERVICES",
+      cosmetics: "COSMETICS",
+      promotions: "PROMOTIONS",
+      contacts: "CONTACTS",
+      aboutPage: {
+        header: `Beauty cannot be artificially created - it is a wonderful inner harmony, lightness, inspiration, and comfort. It’s the uplifting feeling of loving yourself and applying modern technology in your work.`,
+        paragraph1: `Dear ladies and gentlemen! The friendly team of “Lanta” salon invites you to think of yourself and immerse in the world of warmth and kindness. We are happy to help both women and men always look perfect. Our salon in Daugavpils has been operating since 1998, constantly expanding the range of services and applying the latest technologies.`,
+        paragraph2: `We appreciate every client! Our experienced masters regularly improve their qualifications by attending various courses to offer only the highest quality services. Their rich imagination and modern equipment help make it possible.`,
+        paragraph3: `Our philosophy - to offer not only services, but also a friendly attitude.`,
+        paragraph4: `Our goal - to make you happy.`,
+        paragraph5: `Our path - to follow global trends and fashion tendencies.`,
+      },
+      preview: {
+        spotText: "Be beautiful",
+        spotTextMall: "Beauty salons in Daugavpils",
+      },
+      servicesPage: {
+        pageName: "Our services",
+        hairdresserServices: "HAIRDRESSING SERVICES",
+        womenHaircuts: "Women’s haircuts",
+        manHaircuts: "Men’s haircuts",
+        childsHaircuts: "Children’s haircuts",
+        coloring: "Hair coloring (highlights, ombre)",
+        laying: "Styling",
+        manicurePedicure: "MANICURE/PEDICURE",
+        manicure: "Classic manicure",
+        pedicure: "Classic pedicure",
+        nailExtension: "Nail extensions (gel/acrylic)",
+        gelish: "Gelish",
+        correction: "Correction",
+        therapeuticManicure: "Therapeutic manicure",
+        therapeuticPedicure: "Therapeutic pedicure",
+        bodyAndFaceCare: "BODY AND FACE CARE",
+        piercing: "Piercing",
+        waxing: "Waxing",
+        eyebrowCorrection: "Eyebrow correction",
+        eyelashes: "Eyelash tinting",
+        eyelashExtension: "Eyelash extensions",
+        eyelashPerm: "Eyelash curling",
+        makeup: "Makeup",
+        cleansesAndFaceMasks: "Facial cleansing and masks",
+        solarium: "SOLARIUM",
+        horizontal: "Horizontal solarium (Ergoline Turbo 450)",
+        vertical: "Vertical solarium (Luxura)",
+        sunCream: "Tanning creams",
+      },
+      contactsPage: {
+        contacts: "Our contacts",
+        mon_fri: "Mon.-Fri. {time}",
+        sat: "Sat. {time}",
+        sun: "Sun. {time}",
+        mon: "Mon. {time}",
+        tue_fri: "Tue.-Fri. {time}",
+        address: "Address",
+        tell: "Phone",
+        workTime: "Working hours",
+        email: "Email",
+      },
+      cosmeticsPage: {
+        pageName: "Our cosmetics",
+      },
+      discountPage: {
+        happyDays: "HAPPY DAY",
+        sunday: "Sunday",
+        discountCosmetics: "{percent} off cosmetics",
+        discountSolarium: "{percent} off solarium",
+        happyHours: "HAPPY HOURS",
+        discountTime: "From 8.00 to 10.00",
+        subscription: "SUBSCRIPTION",
+      },
+    },
+  },
 ];
+
 
 
 export const discountPercents = {

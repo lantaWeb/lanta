@@ -25,11 +25,11 @@ class Preview extends Component {
               <Text id="preview.spotTextMall" />
             </div>
           </div>
-          {currentLang === languages.RU && (
+          {/* {currentLang === languages.RU && (
             <div className="spot_img">
               <Image src={Discount} fluid />
             </div>
-          )}
+          )} */}
           <div className="down_icon">
             <Link
               activeClass="active"

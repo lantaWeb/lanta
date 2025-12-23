@@ -14,14 +14,19 @@ import { TranslationsProvider } from "@eo-locale/react";
 class layoutPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { currentLang: languages.LV, langToChange: languages.RU };
+    this.state = { currentLang: languages.LV, langToChange: languages.EN };
     this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   componentDidMount() {
     const savedLang = localStorage.getItem("lang");
-    const currentLang = savedLang ? savedLang.toUpperCase() : languages.LV;
-    
+
+    const allowedLangs = [languages.EN, languages.LV];
+
+    const currentLang = allowedLangs.includes(savedLang)
+      ? savedLang.toUpperCase()
+      : languages.LV;
+
     this.setState({
       currentLang,
       langToChange: this.getLangToChange(currentLang),
@@ -29,7 +34,7 @@ class layoutPage extends Component {
   }
 
   getLangToChange = (currentLang) =>
-    currentLang === languages.LV ? languages.RU : languages.LV;
+    currentLang === languages.LV ? languages.EN : languages.LV;
 
   changeLanguage(lang) {
     localStorage.setItem("lang", lang);

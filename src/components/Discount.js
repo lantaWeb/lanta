@@ -87,7 +87,7 @@ class Discount extends Component {
                 </Card.Text>
               </Card.Body>
             </Card>
-            {currentLang === languages.RU && (
+            {/* {currentLang === languages.RU && (
               <Card
                 className="bg-dark"
                 onClick={this.scrollToTop}
@@ -95,7 +95,7 @@ class Discount extends Component {
               >
                 <Card.Img bsPrefix="discountImg" src={DiscountImg} />
               </Card>
-            )}
+            )} */}
           </CardDeck>
         </Container>
       </div>
