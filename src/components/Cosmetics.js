@@ -9,24 +9,25 @@ class Cosmetics extends Component {
       let images = {};
       r.keys().map((item, index) => {
         images[index] = r(item);
+        return null;
       });
       return images;
     }
+
     const images = importAll(
       require.context("../img/cosmetics", false, /\.(png|jpe?g|svg)$/)
     );
+
     return (
-      <div className="white_page">
+      <div className="white_page cosmetics-page">
         <Header title={<Text id="cosmeticsPage.pageName" />} />
         <Container>
-          <CardColumns>
-            {Object.keys(images).map((key, i) => {
-              return (
-                <Card className="text-white">
-                  <Card.Img variant="top" src={images[key]} />
-                </Card>
-              );
-            })}
+          <CardColumns className="cosmetics-columns">
+            {Object.keys(images).map((key) => (
+              <Card className="cosmetics-card" key={key}>
+                <Card.Img className="cosmetics-img" variant="top" src={images[key]} loading="lazy" />
+              </Card>
+            ))}
           </CardColumns>
         </Container>
       </div>

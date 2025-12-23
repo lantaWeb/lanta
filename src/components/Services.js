@@ -10,17 +10,17 @@ import { Text } from "@eo-locale/react";
 class Services extends Component {
   render() {
     return (
-      <div className="white_page">
+      <div className="white_page services-page">
         <Header title={<Text id="servicesPage.pageName" />} />
         <Container>
-          <CardDeck>
-            <Card className="bg-dark text-white">
-              <Card.Img className="mob-fit" variant="top" src={Hairdrsser} />
-              <Card.ImgOverlay>
-                <Card.Title>
+          <CardDeck className="services-deck">
+            <Card className="services-card text-white">
+              <Card.Img className="services-img mob-fit" variant="top" src={Hairdrsser} />
+              <Card.ImgOverlay className="services-overlay">
+                <Card.Title className="services-title">
                   <Text id="servicesPage.hairdresserServices" />
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="services-text">
                   <Text id="servicesPage.womenHaircuts" />
                   <br />
                   <Text id="servicesPage.manHaircuts" />
@@ -30,17 +30,17 @@ class Services extends Component {
                   <Text id="servicesPage.coloring" />
                   <br />
                   <Text id="servicesPage.laying" />
-                  <br />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>
-            <Card className="bg-dark text-white">
-              <Card.Img className="mob-fit" variant="top" src={Manicure} />
-              <Card.ImgOverlay>
-                <Card.Title>
+
+            <Card className="services-card text-white">
+              <Card.Img className="services-img mob-fit" variant="top" src={Manicure} />
+              <Card.ImgOverlay className="services-overlay">
+                <Card.Title className="services-title">
                   <Text id="servicesPage.manicurePedicure" />
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="services-text">
                   <Text id="servicesPage.manicure" />
                   <br />
                   <Text id="servicesPage.pedicure" />
@@ -54,20 +54,21 @@ class Services extends Component {
                   <Text id="servicesPage.therapeuticManicure" />
                   <br />
                   <Text id="servicesPage.therapeuticPedicure" />
-                  <br />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>
-            <Card className="bg-dark text-white">
-              <Card.Img className="mob-fit" variant="top" src={BodyCare} />
-              <Card.ImgOverlay>
-                <Card.Title>
+
+            <Card className="services-card text-white">
+              <Card.Img className="services-img mob-fit" variant="top" src={BodyCare} />
+              <Card.ImgOverlay className="services-overlay">
+                <Card.Title className="services-title">
                   <Text id="servicesPage.bodyAndFaceCare" />
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="services-text">
                   <Text id="servicesPage.piercing" />
                   <br />
-                  <Text id="servicesPage.waxing" /> <br />
+                  <Text id="servicesPage.waxing" />
+                  <br />
                   <Text id="servicesPage.eyebrowCorrection" />
                   <br />
                   <Text id="servicesPage.eyelashes" />
@@ -79,23 +80,22 @@ class Services extends Component {
                   <Text id="servicesPage.makeup" />
                   <br />
                   <Text id="servicesPage.cleansesAndFaceMasks" />
-                  <br />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>
-            <Card className="bg-dark text-white">
-              <Card.Img className="mob-fit" variant="top" src={Solarium} />
-              <Card.ImgOverlay>
-                <Card.Title>
+
+            <Card className="services-card text-white">
+              <Card.Img className="services-img mob-fit" variant="top" src={Solarium} />
+              <Card.ImgOverlay className="services-overlay">
+                <Card.Title className="services-title">
                   <Text id="servicesPage.solarium" />
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="services-text">
                   <Text id="servicesPage.horizontal" />
                   <br />
                   <Text id="servicesPage.vertical" />
                   <br />
                   <Text id="servicesPage.sunCream" />
-                  <br />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>

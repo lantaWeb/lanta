@@ -36,7 +36,7 @@ class Preview extends Component {
               to="section1"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={40}
               duration={500}
             >
               <i

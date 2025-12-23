@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  Carousel,
-  Container,
-  Card,
-  CardDeck,
-  ListGroupItem,
-} from "react-bootstrap";
+import { Carousel, Container, Card, CardDeck, ListGroupItem } from "react-bootstrap";
 import Header from "./Header";
 import SalonValkas from "../img/salon/1_edited.jpg";
 import SalonTaller from "../img/salon/2_edited.jpg";
@@ -57,76 +51,50 @@ const lantaCont = [
 class Contacts extends Component {
   render() {
     return (
-      <div className="white_page">
+      <div className="white_page contacts-page">
         <Header title={<Text id="contactsPage.contacts" />} />
         <Container>
-          <CardDeck style={{ margin: "auto" }}>
+          <CardDeck className="contacts-deck" style={{ margin: "auto" }}>
             {lantaCont.map((item) =>
               Object.keys(item).map((key) => (
-                <div style={{ minWidth: "33%" }}>
-                  <Card>
-                    <Card.Body>
-                      <Card.Title
-                        style={{
-                          fontWeight: "600",
-                          marginTop: "20px",
-                          marginBottom: "0px",
-                        }}
-                      >
-                        {item[key].name}
-                      </Card.Title>
-                      <Card.Text
-                        style={{
-                          fontWeight: "600",
-                          marginTop: "20px",
-                          marginBottom: "0px",
-                        }}
-                      >
+                <div className="contacts-col" style={{ minWidth: "33%" }} key={key}>
+                  <Card className="contacts-card">
+                    <Card.Body className="contacts-card-body">
+                      <Card.Title className="contacts-title">{item[key].name}</Card.Title>
+
+                      <Card.Text className="contacts-label">
                         <Text id="contactsPage.address" />:
                       </Card.Text>
-                      <ListGroupItem>
-                        <a href={item[key].addressLink} target="_blank">
+                      <ListGroupItem className="contacts-item">
+                        <a href={item[key].addressLink} target="_blank" rel="noreferrer">
                           <i className="fas fa-map-marker-alt"></i>
                           {"  "}
                           {item[key].address}
                         </a>
                       </ListGroupItem>
-                      <Card.Text
-                        style={{
-                          fontWeight: "600",
-                          marginTop: "20px",
-                          marginBottom: "0px",
-                        }}
-                      >
+
+                      <Card.Text className="contacts-label">
                         <Text id="contactsPage.tell" />:
                       </Card.Text>
                       {item[key].tel.map((t) => (
-                        <ListGroupItem>
+                        <ListGroupItem className="contacts-item" key={t}>
                           <a href={"tel:" + t}>{t}</a>
                         </ListGroupItem>
                       ))}
-                      <Card.Text
-                        style={{
-                          fontWeight: "600",
-                          marginTop: "20px",
-                          marginBottom: "0px",
-                        }}
-                      >
+
+                      <Card.Text className="contacts-label">
                         <Text id="contactsPage.workTime" />:
                       </Card.Text>
-                      {item[key].workTime.map((tel) => (
-                        <ListGroupItem>{tel}</ListGroupItem>
+                      {item[key].workTime.map((wt, idx) => (
+                        <ListGroupItem className="contacts-item" key={idx}>
+                          {wt}
+                        </ListGroupItem>
                       ))}
-                      <Card.Text
-                        style={{
-                          fontWeight: "600",
-                          marginTop: "20px",
-                          marginBottom: "0px",
-                        }}
-                      >
+
+                      <Card.Text className="contacts-label">
                         <Text id="contactsPage.email" />:
                       </Card.Text>
-                      <ListGroupItem>
+                      <ListGroupItem className="contacts-item">
                         <a href={"mailto:" + item[key].email}>
                           <i className="fas fa-envelope"></i>
                           {"  "}
@@ -140,29 +108,19 @@ class Contacts extends Component {
             )}
           </CardDeck>
 
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SalonValkas}
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SalonTaller}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SalonDitton}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel>
+          <div className="contacts-carousel">
+            <Carousel>
+              <Carousel.Item>
+                <img className="d-block w-100 contacts-carousel-img" src={SalonValkas} alt="Salon" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100 contacts-carousel-img" src={SalonTaller} alt="Salon" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100 contacts-carousel-img" src={SalonDitton} alt="Salon" />
+              </Carousel.Item>
+            </Carousel>
+          </div>
         </Container>
       </div>
     );

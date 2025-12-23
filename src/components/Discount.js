@@ -1,101 +1,123 @@
 import React, { Component } from "react";
 import { Card, CardDeck, Container } from "react-bootstrap";
-import Sales from "../img/sales.jpg";
 import DiscountTop from "../img/discountTop.png";
-import DiscountImg from "../img/discount.png";
-import { animateScroll as scroll } from "react-scroll";
 import { Text } from "@eo-locale/react";
-import { discountPercents, languages } from "../_constants";
+import { discountPercents } from "../_constants";
 
 class Discount extends Component {
-  scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
   render() {
-    const { currentLang } = this.props;
     return (
-      <div className="ghost_page">
-        <Container>
-          <CardDeck>
-            <Card>
-              <Card.Img variant="top" src={DiscountTop} />
-              <Card.Body style={{ minHeight: "225px" }}>
-                <Card.Title>
+      <div className="ghost_page discount-page">
+        <Container className="discount-container">
+          <CardDeck className="discount-deck">
+            {/* CARD 1 */}
+            <Card className="discount-card">
+              <Card.Img
+                className="discount-card-image"
+                variant="top"
+                src={DiscountTop}
+                alt=""
+              />
+
+              <Card.Body className="discount-card-body">
+                <Card.Title className="discount-title">
                   <Text id="discountPage.happyDays" />
+                  <br />
+                  <span className="discount-subtitle">
+                    <Text id="discountPage.sunday" />
+                  </span>
                 </Card.Title>
-                <Card.Text>
-                  <Text id="discountPage.sunday" />
+
+                <Card.Text className="discount-text">
+                  <span className="discount-line">
+                    <Text
+                      id="discountPage.discountCosmetics"
+                      percent={
+                        <span className="discountText">
+                          {discountPercents.fifteen}
+                        </span>
+                      }
+                    />
+                  </span>
                   <br />
-                  <Text
-                    id="discountPage.discountCosmetics"
-                    percent={
-                      <span className="discountText">
-                        {discountPercents.fifteen}
-                      </span>
-                    }
-                  />
-                  <br />
-                  <Text
-                    id="discountPage.discountSolarium"
-                    percent={
-                      <span className="discountText">
-                        {discountPercents.twenty}
-                      </span>
-                    }
-                  />
-                  <br />
+
+                  <span className="discount-line">
+                    <Text
+                      id="discountPage.discountSolarium"
+                      percent={
+                        <span className="discountText">
+                          {discountPercents.twenty}
+                        </span>
+                      }
+                    />
+                  </span>
                 </Card.Text>
               </Card.Body>
             </Card>
 
-            <Card>
-              <Card.Img variant="top" src={DiscountTop} />
-              <Card.Body style={{ minHeight: "225px" }}>
-                <Card.Title>
+            {/* CARD 2 */}
+            <Card className="discount-card">
+              <Card.Img
+                className="discount-card-image"
+                variant="top"
+                src={DiscountTop}
+                alt=""
+              />
+
+              <Card.Body className="discount-card-body">
+                <Card.Title className="discount-title">
                   <Text id="discountPage.happyHours" />
-                  <br /> <Text id="discountPage.discountTime" />
+                  <br />
+                  <span className="discount-subtitle">
+                    <Text id="discountPage.discountTime" />
+                  </span>
                 </Card.Title>
-                <Card.Text>
-                  <Text
-                    id="discountPage.discountSolarium"
-                    percent={
-                      <span className="discountText">
-                        {discountPercents.twenty}
-                      </span>
-                    }
-                  />
+
+                <Card.Text className="discount-text">
+                  <span className="discount-line">
+                    <Text
+                      id="discountPage.discountSolarium"
+                      percent={
+                        <span className="discountText">
+                          {discountPercents.twenty}
+                        </span>
+                      }
+                    />
+                  </span>
                 </Card.Text>
               </Card.Body>
             </Card>
 
-            <Card>
-              <Card.Img variant="top" src={DiscountTop} />
-              <Card.Body style={{ minHeight: "225px" }}>
-                <Card.Title>
+            {/* CARD 3 */}
+            <Card className="discount-card">
+              <Card.Img
+                className="discount-card-image"
+                variant="top"
+                src={DiscountTop}
+                alt=""
+              />
+
+              <Card.Body className="discount-card-body">
+                <Card.Title className="discount-title">
                   <Text id="discountPage.subscription" />
+                  {/* Чтобы структура была как у остальных (и не прыгали отступы) */}
+                  <span className="discount-subtitle">&nbsp;</span>
                 </Card.Title>
-                <Card.Text>
-                  <Text
-                    id="discountPage.discountSolarium"
-                    percent={
-                      <span className="discountText">
-                        {discountPercents.twenty}
-                      </span>
-                    }
-                  />
+
+                <Card.Text className="discount-text">
+                  <span className="discount-line">
+                    <Text
+                      id="discountPage.discountSolarium"
+                      percent={
+                        <span className="discountText">
+                          {discountPercents.twenty}
+                        </span>
+                      }
+                    />
+                  </span>
                 </Card.Text>
               </Card.Body>
             </Card>
-            {/* {currentLang === languages.RU && (
-              <Card
-                className="bg-dark"
-                onClick={this.scrollToTop}
-                style={{ cursor: "pointer" }}
-              >
-                <Card.Img bsPrefix="discountImg" src={DiscountImg} />
-              </Card>
-            )} */}
           </CardDeck>
         </Container>
       </div>
