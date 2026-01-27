@@ -82,7 +82,7 @@ export const locales = [
         happyDays: "LAIMĪGĀ DIENA",
         sunday: "Svētdiena",
         discountCosmetics: "{percent} atlaide kosmētikai",
-        discountSolarium: "{percent} atlaide soltārijam",
+        discountSolarium: "{percent} atlaide solārijam",
         happyHours: "LAIMĪGĀS STUNDAS",
         discountTime: "No 8.00 līdz 10.00",
         subscription: "ABONEMENTS",
