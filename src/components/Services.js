@@ -21,15 +21,23 @@ class Services extends Component {
                   <Text id="servicesPage.hairdresserServices" />
                 </Card.Title>
                 <Card.Text className="services-text">
-                  <Text id="servicesPage.womenHaircuts" />
+                  <Text id="servicesPage.newHaircuts" />
+                  <br />
+                  <Text id="servicesPage.newHairmake" />
+                  <br />
+                  <Text id="servicesPage.newHairproc" />
+                  <br />
+                  <Text id="servicesPage.newHairnight" />
+                  <br />
+                  <Text id="servicesPage.coloring" />
+                  <br />
+                  <Text id="servicesPage.newcoloringremove" />
+                  <br />
+                  <Text id="servicesPage.newHairwawing" />
                   <br />
                   <Text id="servicesPage.manHaircuts" />
                   <br />
                   <Text id="servicesPage.childsHaircuts" />
-                  <br />
-                  <Text id="servicesPage.coloring" />
-                  <br />
-                  <Text id="servicesPage.laying" />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>
@@ -43,17 +51,27 @@ class Services extends Component {
                 <Card.Text className="services-text">
                   <Text id="servicesPage.manicure" />
                   <br />
+                  <Text id="servicesPage.newgelishmanicure" />
+                  <br />
+                  <Text id="servicesPage.newgelishremoce" />
+                  <br />
+                  <Text id="servicesPage.newmanicuredesign" />
+                  <br />
                   <Text id="servicesPage.pedicure" />
+                  <br />
+                  <Text id="servicesPage.newfootnail" />
+                  <br />
+                  <Text id="servicesPage.newfootnailgelish" />
+                  <br />
+                  <Text id="servicesPage.newnailgel" />
                   <br />
                   <Text id="servicesPage.nailExtension" />
                   <br />
-                  <Text id="servicesPage.gelish" />
-                  <br />
                   <Text id="servicesPage.correction" />
                   <br />
-                  <Text id="servicesPage.therapeuticManicure" />
+                  <Text id="servicesPage.newnailacril" />
                   <br />
-                  <Text id="servicesPage.therapeuticPedicure" />
+                  <Text id="servicesPage.newgelgelishremove" />
                 </Card.Text>
               </Card.ImgOverlay>
             </Card>
@@ -65,15 +83,15 @@ class Services extends Component {
                   <Text id="servicesPage.bodyAndFaceCare" />
                 </Card.Title>
                 <Card.Text className="services-text">
-                  <Text id="servicesPage.piercing" />
+                  <Text id="servicesPage.newvask" />
                   <br />
-                  <Text id="servicesPage.waxing" />
+                  <Text id="servicesPage.newears" />
+                  <br />
+                  <Text id="servicesPage.piercing" />
                   <br />
                   <Text id="servicesPage.eyebrowCorrection" />
                   <br />
                   <Text id="servicesPage.eyelashes" />
-                  <br />
-                  <Text id="servicesPage.eyelashExtension" />
                   <br />
                   <Text id="servicesPage.eyelashPerm" />
                   <br />
